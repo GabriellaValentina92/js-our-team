@@ -10,6 +10,18 @@ h1, p{
 
 .container{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
     max-width: 1100px;
     margin: auto;
+}
+
+.output img {
+    max-width: 300px;
+}
+
+.content{
+    text-align: center;
 }

@@ -17,47 +17,58 @@ Prima la logica in italiano e poi traduciamo in codice.
 E ricordiamoci che console.log() è nostro amico!
 */
 
-
 const team = [
     {
         fullName: 'Wayne Barnett',
         workField: 'Founder & CEO',
-        ProfilePicture: 'wayne-barnett-founder-ceo.jpg',
+        profilePicture: 'wayne-barnett-founder-ceo.jpg',
     },
 
     {
         fullName: 'Angela Caroll',
         workField: 'Chief Editor',
-        ProfilePicture: 'angela-caroll-chief-editor.jpg',
+        profilePicture: 'angela-caroll-chief-editor.jpg"',
     },
 
     {
         fullName: 'Walter Gordon ',
         workField: 'Office Manager',
-        ProfilePicture: 'walter-gordon-office-manager.jpg',
+        profilePicture: 'walter-gordon-office-manager.jpg',
     },
 
     {
         fullName: 'Angela Lopez',
         workField: 'Social Media Manager',
-        ProfilePicture: 'angela-lopez-social-media-manager.jpg',
+        profilePicture: 'angela-lopez-social-media-manager.jpg',
     },
 
     {
         fullName: 'Scott Estrada',
         workField: 'Developer',
-        ProfilePicture: 'scott-estrada-developer.jpg',
+        profilePicture: 'scott-estrada-developer.jpg',
     },
 
     {
         fullName: 'Barbara Ramos',
         workField: 'Graphic Designer',
-        ProfilePicture: 'barbara-ramos-graphic-designer.jpg',
+        profilePicture: 'barbara-ramos-graphic-designer.jpg',
     },
 ];
+
+const eleContainer = document.querySelector('.container')
 
 for (i =0; i < team.length; i++) {
     const teamMember = team[i];
     console.log(teamMember);
+
+    eleContainer.innerHTML += `
+                        <div class='output'>
+                            <img src="img/${teamMember.profilePicture}" alt="${teamMember.fullName}">
+                            <div class="content">
+                                <h2>${teamMember.fullName}</h2>
+                                <p>${teamMember.workField}</p>
+                            </div>
+                        </div>`;
 }
+
 
